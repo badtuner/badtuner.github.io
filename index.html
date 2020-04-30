@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous">
+    </script>
+    <script src="gapless5.js" language="JavaScript" type="text/javascript"></script>
+</head>
+<body>
+    <div class="center">
+        <div><img style="height: 2vh; width: auto;" src="TITLE.png"></div>
+        <table class="center">
+            <tbody>
+                <tr class="row1">
+                    <td class="col1 selected">
+                        <img src="drumson.png">
+                        <audio id="myAudio">
+                            <source src="tracks/D.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col2 selected">
+                        <img src="drumson.png">
+                        <audio id="myAudio">
+                            <source src="tracks/D.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col3 selected">
+                        <img src="drumson.png">
+                        <audio id="myAudio">
+                            <source src="tracks/D.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col4 selected">
+                        <img src="drumson.png">
+                        <audio id="myAudio">
+                            <source src="tracks/D.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr class="row2">
+                    <td class="col1">
+                        <img src="bassoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/B.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col2">
+                        <img src="bassoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/B.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col3">
+                        <img src="bassoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/B.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col4">
+                        <img src="bassoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/B.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr class="row3">
+                    <td class="col1">
+                        <img src="synthoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/S.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col2">
+                        <img src="synthoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/S.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col3">
+                        <img src="synthoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/S.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col4">
+                        <img src="synthoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/S.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr class="row4">
+                    <td class="col1">
+                        <img src="vocalsoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/V.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col2">
+                        <img src="vocalsoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/V.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col3">
+                        <img src="vocalsoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/V.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td class="col4">
+                        <img src="vocalsoff.png">
+                        <audio id="myAudio">
+                            <source src="tracks/V.wav" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="bottom">
+            <img style="height: 100%; width: auto;" src="Play_Button.png" onclick="playAll()" alt="play button">
+            <img style="height: 100%; width: auto;" src="stop.png" onclick="stopAll()" alt="stop button">
+            <input id="slider" type="range" class="volume" name="gain" min="0" max="65535" value="65535">
+        </div>
+    </div>
+    <div id="player" hidden></div>
+    
+    
+    
+
+      <script src="script.js"></script>
+</body>
+</html>
