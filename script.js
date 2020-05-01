@@ -235,6 +235,93 @@ function getCol4Track(){
     return audioString;
 }
 
+function removeSelected(){
+    let selectedCol = document.getElementsByClassName("topSelected");
+    for(item of selectedCol){
+        item.classList.remove("topSelected");
+    }
+    selectedCol = document.getElementsByClassName("middleSelected");
+    for(item of selectedCol){
+        item.classList.remove("middleSelected");
+    }
+    selectedCol = document.getElementsByClassName("bottomSelected");
+    for(item of selectedCol){
+        item.classList.remove("bottomSelected");
+    }
+}
+
+function selectFirstCol(){
+    removeSelected();
+    let col1 = document.getElementsByClassName("col1");
+    for(col of cols){
+        if(!col.classList.contains("Selected")){
+            if(col.parentElement.classList.contains("row1")){
+                col.classList.add("topSelected");
+            }
+            else if(col.parentElement.classList.contains("row2") || col.parentElement.classList.contains("row3")){
+                col.classList.add("middleSelected");
+            }
+            else{
+                col.classList.add("bottomSelected");
+            }
+        }
+    }
+}
+
+function selectSecondCol(){
+    removeSelected();
+    let col1 = document.getElementsByClassName("col2");
+    for(col of cols){
+        if(!col.classList.contains("Selected")){
+            if(col.parentElement.classList.contains("row1")){
+                col.classList.add("topSelected");
+            }
+            else if(col.parentElement.classList.contains("row2") || col.parentElement.classList.contains("row3")){
+                col.classList.add("middleSelected");
+            }
+            else{
+                col.classList.add("bottomSelected");
+            }
+        }
+    }
+}
+
+function selectThirdCol(){
+    removeSelected();
+    let col1 = document.getElementsByClassName("col3");
+    for(col of cols){
+        if(!col.classList.contains("Selected")){
+            if(col.parentElement.classList.contains("row1")){
+                col.classList.add("topSelected");
+            }
+            else if(col.parentElement.classList.contains("row2") || col.parentElement.classList.contains("row3")){
+                col.classList.add("middleSelected");
+            }
+            else{
+                col.classList.add("bottomSelected");
+            }
+        }
+    }
+}
+
+function selectFourthCol(){
+    removeSelected();
+    let col1 = document.getElementsByClassName("col4");
+    for(col of cols){
+        if(!col.classList.contains("Selected")){
+            if(col.parentElement.classList.contains("row1")){
+                col.classList.add("topSelected");
+            }
+            else if(col.parentElement.classList.contains("row2") || col.parentElement.classList.contains("row3")){
+                col.classList.add("middleSelected");
+            }
+            else{
+                col.classList.add("bottomSelected");
+            }
+        }
+    }
+}
+
 var player = new Gapless5("player");
 
 slider = document.getElementById("slider");
@@ -256,6 +343,7 @@ function playAll(){
     document.getElementById("playButton").src = "play_pink.png";
     document.getElementById("stopButton").src = "stop_purple.png";
     player.play();
+    selectFirstCol();
     slider.oninput = function() {
         document.getElementById("player").querySelector("input[type=range][class=volume]").value = this.value;
         $("#player").find("input[type=range][class=volume]").trigger("oninput");
