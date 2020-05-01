@@ -363,7 +363,7 @@ function playAll(){
         document.getElementById("player").querySelector("input[type=range][class=volume]").value = this.value;
         $("#player").find("input[type=range][class=volume]").trigger("oninput");
     }
-    $("#player").find("input[type=range][class=volume]").trigger("oninput");
+    $("#slider").trigger("oninput");
 }
 
 function stopAll() {
