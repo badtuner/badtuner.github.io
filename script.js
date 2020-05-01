@@ -241,8 +241,8 @@ function removeSelected(){
         item.classList.remove("topSelected");
     }
     selectedCol = document.getElementsByClassName("middleSelected");
-    console.log(selectedCol);
     for(item of selectedCol){
+        console.log(item);
         item.classList.remove("middleSelected");
     }
     selectedCol = document.getElementsByClassName("bottomSelected");
