@@ -332,13 +332,15 @@ function playAll(){
         tracks: ["tracks/"+getCol1Track()+".wav", "tracks/"+getCol2Track()+".wav", "tracks/"+getCol3Track()+".wav", "tracks/"+getCol4Track()+".wav"]
     });
     player.onstop = function() {
-        stopAll();
+        document.getElementById("playButton").src = "play_purple.png";
+        document.getElementById("stopButton").src = "stop_pink.png";
     };
     player.onfinishedtrack = function() {
         console.log("on finish track");
     };
     player.onfinishedall = function() {
-        stopAll();
+        document.getElementById("playButton").src = "play_purple.png";
+        document.getElementById("stopButton").src = "stop_pink.png";
     };
     document.getElementById("playButton").src = "play_pink.png";
     document.getElementById("stopButton").src = "stop_purple.png";
@@ -352,6 +354,4 @@ function playAll(){
 
 function stopAll() {
     player.stop();
-    document.getElementById("playButton").src = "play_purple.png";
-    document.getElementById("stopButton").src = "stop_pink.png";
 }
