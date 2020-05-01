@@ -242,7 +242,6 @@ function removeSelected(){
     }
     selectedCol = document.getElementsByClassName("middleSelected");
     for(item of selectedCol){
-        console.log(item);
         item.classList.remove("middleSelected");
     }
     selectedCol = document.getElementsByClassName("bottomSelected");
@@ -346,7 +345,7 @@ function playAll(){
         else if(count == 2){
             selectThirdCol();
         }
-        else{
+        else if(count == 3){
             selectFourthCol();
         }
         count += 1;
