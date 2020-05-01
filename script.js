@@ -253,7 +253,7 @@ function removeSelected(){
 function selectFirstCol(){
     removeSelected();
     let col1 = document.getElementsByClassName("col1");
-    for(col of cols){
+    for(col of col1){
         if(!col.classList.contains("Selected")){
             if(col.parentElement.classList.contains("row1")){
                 col.classList.add("topSelected");
@@ -270,8 +270,8 @@ function selectFirstCol(){
 
 function selectSecondCol(){
     removeSelected();
-    let col1 = document.getElementsByClassName("col2");
-    for(col of cols){
+    let col2 = document.getElementsByClassName("col2");
+    for(col of col2){
         if(!col.classList.contains("Selected")){
             if(col.parentElement.classList.contains("row1")){
                 col.classList.add("topSelected");
@@ -288,8 +288,8 @@ function selectSecondCol(){
 
 function selectThirdCol(){
     removeSelected();
-    let col1 = document.getElementsByClassName("col3");
-    for(col of cols){
+    let col3 = document.getElementsByClassName("col3");
+    for(col of col3){
         if(!col.classList.contains("Selected")){
             if(col.parentElement.classList.contains("row1")){
                 col.classList.add("topSelected");
@@ -306,8 +306,8 @@ function selectThirdCol(){
 
 function selectFourthCol(){
     removeSelected();
-    let col1 = document.getElementsByClassName("col4");
-    for(col of cols){
+    let col4 = document.getElementsByClassName("col4");
+    for(col of col4){
         if(!col.classList.contains("Selected")){
             if(col.parentElement.classList.contains("row1")){
                 col.classList.add("topSelected");
