@@ -244,6 +244,20 @@ function playAll(){
     player = new Gapless5("player", {
         tracks: ["tracks/"+getCol1Track()+".wav", "tracks/"+getCol2Track()+".wav", "tracks/"+getCol3Track()+".wav", "tracks/"+getCol4Track()+".wav"]
     });
+    player.onstop = function() {
+        console.log("on stopped");
+    };
+    player.onnext = function() {
+        console.log("on next");
+    };
+    player.onfinishedtrack = function() {
+        console.log("on finish track");
+    };
+    player.onfinishedall = function() {
+        console.log("on finish all");
+    };
+    document.getElementById("playButton").src = "play_pink.png";
+    document.getElementById("stopButton").src = "stop_purple.png";
     player.play();
     slider.oninput = function() {
         document.getElementById("player").querySelector("input[type=range][class=volume]").value = this.value;
@@ -253,4 +267,6 @@ function playAll(){
 
 function stopAll() {
     player.stop();
+    document.getElementById("playButton").src = "play_purple.png";
+    document.getElementById("stopButton").src = "stop_pink.png";
 }
