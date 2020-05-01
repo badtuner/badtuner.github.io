@@ -339,6 +339,7 @@ function playAll(){
         removeSelected();
     };
     player.onfinishedtrack = function() {
+        removeSelected();
         if(count == 1){
             selectSecondCol();
         }
