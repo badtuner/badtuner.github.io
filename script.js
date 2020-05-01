@@ -328,19 +328,31 @@ slider = document.getElementById("slider");
 
 function playAll(){
     player.stop();
+    let count = 1;
     player = new Gapless5("player", {
         tracks: ["tracks/"+getCol1Track()+".wav", "tracks/"+getCol2Track()+".wav", "tracks/"+getCol3Track()+".wav", "tracks/"+getCol4Track()+".wav"]
     });
     player.onstop = function() {
         document.getElementById("playButton").src = "play_purple.png";
         document.getElementById("stopButton").src = "stop_pink.png";
+        removeSelected();
     };
     player.onfinishedtrack = function() {
-        console.log("on finish track");
+        if(count == 1){
+            selectSecondCol();
+        }
+        else if(count == 2){
+            selectThirdCol();
+        }
+        else{
+            selectFourthCol();
+        }
+        count += 1;
     };
     player.onfinishedall = function() {
         document.getElementById("playButton").src = "play_purple.png";
         document.getElementById("stopButton").src = "stop_pink.png";
+        removeSelected();
     };
     document.getElementById("playButton").src = "play_pink.png";
     document.getElementById("stopButton").src = "stop_purple.png";
