@@ -108,3 +108,29 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: rgb(105, 85, 103);
 }
+
+table{
+  border-spacing: 0px;
+}
+
+.topSelected{
+  border: 10px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: #ffaaaa;
+}
+
+.topSelected{
+  border: 10px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: #ffaaaa;
+}
+
+.bottomSelected{
+  border: 10px;
+  border-top: 0px;
+  border-style: solid;
+  border-color: #ffaaaa;
+}

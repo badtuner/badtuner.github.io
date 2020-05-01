@@ -245,16 +245,13 @@ function playAll(){
         tracks: ["tracks/"+getCol1Track()+".wav", "tracks/"+getCol2Track()+".wav", "tracks/"+getCol3Track()+".wav", "tracks/"+getCol4Track()+".wav"]
     });
     player.onstop = function() {
-        console.log("on stopped");
-    };
-    player.onnext = function() {
-        console.log("on next");
+        stopAll();
     };
     player.onfinishedtrack = function() {
         console.log("on finish track");
     };
     player.onfinishedall = function() {
-        console.log("on finish all");
+        stopAll();
     };
     document.getElementById("playButton").src = "play_pink.png";
     document.getElementById("stopButton").src = "stop_purple.png";
