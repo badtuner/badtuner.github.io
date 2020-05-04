@@ -14,7 +14,17 @@
 </head>
 <body>
     <div class="center">
-        <div><img style="height: 2vh; width: auto;" src="TITLE.png"></div>
+        <div><a href="https://www.youtube.com/embed/V37V64yDe2w"><img style="height: 2vh; width: auto;" src="TITLE.png"></a></div>
+        <div>
+            OPTIMIZED FOR DESKTOP
+
+1. The tiles turn pink when ON, and purple when OFF
+2. Select the tiles you want turned ON before pressing play.
+3. Each row represents a different looped instrument
+4. Each column represents a different phrase (4 bars). They will play one at the time from left to right
+5. Press play to start from the beginning. Any selections you make while your loop is playing will not be applied to the current loop playing.
+6. Any issues? Refresh your browser!
+        </div>
         <table class="center">
             <tbody>
                 <tr class="row1">
@@ -128,9 +138,6 @@
             <img id="playButton" style="height: 100%; width: auto;" src="play_purple.png" onclick="playAll()" alt="play button">
             <img id="stopButton" style="height: 100%; width: auto;" src="stop_pink.png" onclick="stopAll()" alt="stop button">
             <input id="slider" type="range" class="volume" name="gain" min="0" max="65535" value="65535">
-        </div>
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V37V64yDe2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
     <div id="player" hidden></div>
